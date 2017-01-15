@@ -1,0 +1,20 @@
+{
+  "name": "radarr.video",
+  "version": "0.0.0",
+  "description": "Radarr's Website",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Radarr/Radarr.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "gitHead": "9ff7aa1bf7fe38c4c5bdb92f56c8ad556916ed67",
+  "readmeFilename": "readme.md",
+  "dependencies": {
+    "gulp": "^3.8.10",
+    "gulp-imagemin": "^2.0.0",
+    "gulp-less": "^1.3.6",
+    "gulp-print": "^1.1.0"
+  }
+}

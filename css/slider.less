@@ -1,0 +1,232 @@
+#feature-slider {
+  height: 720px;
+  height: 480px;
+  background: #262626;
+  z-index: 1;
+  margin-bottom: 40px;
+  h1 {
+    font-weight: 100;
+    color: #ccc;
+    font-size: 60px;
+    line-height: 66px;
+    text-align: center;
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    strong {
+      text-transform: uppercase;
+      font-size: 14px;
+      margin: 0 0 20px;
+    }
+
+
+
+
+
+
+  }
+  #pagination {
+    position: absolute;
+    top: 505px;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    display: none;
+    list-style-type: none;
+    li {
+      text-indent: -99999em;
+      float: left;
+      padding: 0 6px;
+      cursor: pointer;
+      a {
+        width: 7px;
+        height: 7px;
+        box-shadow: 0px 0px 1px 2px #ccc;
+        background: black;
+        border-radius: 10px;
+        display: block;
+        opacity: .7;
+        -webkit-transition: opacity .1s linear;
+        -moz-transition: opacity .1s linear;
+        transition: opacity .1s linear;
+      }
+    }
+    li.active {
+      a {
+        background: #35c5f4;
+        box-shadow: none;
+        width: 8px;
+        height: 8px;
+      }
+    }
+    li:hover {
+      a {
+        opacity: 1;
+      }
+    }
+  }
+  .slide {
+    width: 100%;
+    height: 480px;
+    position: absolute;
+    display: none;
+    overflow: hidden;
+    z-index: 1;
+    .info {
+      display: none;
+      z-index: 10;
+      a:hover {
+        opacity: .8;
+      }
+    }
+
+    .asset, .fade {
+      position: absolute;
+      display: none;
+    }
+  }
+  .slide.previous {
+    z-index: 1;
+  }
+  .slide.active {
+    z-index: 2;
+  }
+  .slide.hidden {
+    display: none;
+  }
+  .slide#showcasing {
+    .info {
+      position: absolute;
+      top: 150px;
+      left: 13%;
+      width: 30%;
+      display: none;
+      z-index: 10;
+      h2 {
+        color: #fff;
+        font-size: 50px;
+        font-weight: normal;
+        line-height: 56px;
+        text-shadow: 1px 1px 1px #31393d;
+      }
+    }
+  }
+  .slide#ideas {
+    .info {
+      position: relative;
+      top: 102px;
+      text-align: center;
+      h2 {
+        color: #fff;
+        font-weight: normal;
+      }
+    }
+  }
+  .slide#tour {
+    .info {
+      position: absolute;
+      top: 140px;
+      right: 6%;
+      width: 24%;
+      h2 {
+        color: #fff;
+        font-size: 45px;
+        font-weight: normal;
+        text-shadow: 1px 1px 1px #3b3262;
+        line-height: 57px;
+      }
+      a {
+        color: #fff;
+        font-weight: bold;
+        background-color: #2a205d;
+        padding: 10px 30px;
+        font-size: 19px;
+        border-radius: 5px;
+        margin-top: 40px;
+        display: inline-block;
+        -webkit-transition: opacity .1s linear;
+        -moz-transition: opacity .1s linear;
+        transition: opacity .1s linear;
+      }
+    }
+  }
+  .slide#responsive {
+    .info {
+      position: absolute;
+      top: 160px;
+      right: 6%;
+      width: 25%;
+      h2 {
+        color: #fff;
+        font-weight: normal;
+        text-shadow: 1px 1px 1px #3b3262;
+      }
+    }
+  }
+  #slide-left {
+    width: 31px;
+    height: 37px;
+    display: block;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    background: url(../img/leftright-arrows.png) no-repeat;
+    opacity: .5;
+    -webkit-transition: opacity .1s linear;
+    -moz-transition: opacity .1s linear;
+    transition: opacity .1s linear;
+    display: none;
+    z-index: 2;
+  }
+  #slide-left:hover {
+    opacity: 1;
+  }
+  #slide-right {
+    width: 31px;
+    height: 37px;
+    display: block;
+    position: absolute;
+    top: 250px;
+    left: auto;
+    right: 0;
+    background: url(../img/leftright-arrows.png) no-repeat;
+    background-position: -31px 0;
+    opacity: .5;
+    -webkit-transition: opacity .1s linear;
+    -moz-transition: opacity .1s linear;
+    transition: opacity .1s linear;
+    display: none;
+    z-index: 2;
+  }
+  #slide-right:hover {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .slide .info h2, .slide .info h2 * {
+    font-size: 30px !important;
+  }
+  .slide#responsive {
+    .info {
+      position: absolute;
+      top: 170px;
+      right: 6%;
+      width: 25%;
+    }
+  }
+  .slide#tour {
+    .info {
+      font-size: 15px;
+      a {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #feature-slider {
+    display: none;
+  }
+}
