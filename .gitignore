@@ -29,3 +29,6 @@ _ReSharper*/
 
 node_modules/*
 .idea/workspace.xml
+
+*.php
+stripe/*
