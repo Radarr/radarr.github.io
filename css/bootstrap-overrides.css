@@ -15,7 +15,7 @@
   .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
-    width: 940px; } }
+    width: 80%; } }
 /*
   Bootstrap 3 by default keeps the navbar visible on tablets.
   From here onwards it's to get the navbar to collapse starting on 991px - tablets
