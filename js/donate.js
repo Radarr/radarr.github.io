@@ -1,7 +1,7 @@
 (function($) {
   var donationAmount = $('#donation-amount');
   var currency = 'usd';
-  var key = 'pk_live_EK6swjWBG7sEK6zrYDplAOhE';
+  var key = 'pk_test_MjMxdir5p0f96zkFmrbWR7zB';
   var chargeApi = '#';
   var chargeAmount = 0;
 
@@ -15,7 +15,7 @@
   function createCharge(options) {
     $.ajax({
       type: "POST",
-      url: chargeApi,
+      url: "charge.php",
       data: options,
       dataType: 'json'
     });
