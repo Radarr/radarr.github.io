@@ -1,0 +1,85 @@
+@reset-global pc;
+
+.el-header, .el-footer {
+    background-color: rgb(71,75,80);
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 60px;
+}
+
+.el-main {
+    background-color: #FFF;
+    color: #000;
+    text-align: center;
+}
+
+.el-carousel__item {
+    background-color: #CCC;
+    padding: 10px;
+}
+
+.el-main h1 {
+    font-size: 48px;
+}
+
+.el-main h2 {
+    font-size: 24px;
+}
+
+.issue-form {
+    max-width: 600px;
+    text-align: center;
+}
+
+.issue-card {
+    text-align: left;
+    margin-top: 25px;
+}
+
+.issue-body {
+    overflow: scroll;
+    max-height: 400px;
+    word-wrap: break-word;
+}
+
+.next-button {
+    margin-top: 25px;
+}
+
+.reddit-button .el-button {
+    background: #FF4500;
+    border-color: #FF4500;
+    margin-right: 10px;
+}
+
+.discord-button .el-button {
+    background: #7289da;
+    border-color: #7289da;
+    margin-left: 10px;
+}
+
+.submit-help {
+    margin: 10px;
+}
+
+.submit-buttons {
+    margin-top: 20px;
+}
+
+pre {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px;
+    max-width: 600px;
+    text-align: left;
+}
+
+code {
+    font-size: 12px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    text-align: left;
+}
