@@ -1,0 +1,111 @@
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="simple-sidebar.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+    <style>
+      html
+      {
+        box-sizing: border-box;
+        overflow: -moz-scrollbars-vertical;
+        overflow-y: scroll;
+      }
+
+      *,
+      *:before,
+      *:after
+      {
+        box-sizing: inherit;
+      }
+
+      body
+      {
+        margin:0;
+        background: #fafafa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <img class="sidebar-header-logo" src="logo-full.png">
+        </div>
+
+        <ul class="navlist list-unstyled components">
+          <li>
+              <a href="javascript:void(0)" onclick='loadSwagger("v0")'>v0.2 API Docs</a>
+          </li>
+          <li class="active">
+              <a href="javascript:void(0)" onclick='loadSwagger("v3")'>v3.0 API Docs</a>
+          </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+          <li>
+              <a href="https://Github.com/Radarr/Radarr" class="download">Github</a>
+          </li>
+          <li>
+              <a href="https://Radarr.video" class="article">Back to Home</a>
+          </li>
+        </ul>
+  
+      </nav>
+      <!-- Page Content -->
+      <div id="content">
+          <div id="swagger-ui" class="swagger"></div>
+      </div>
+    </div>
+
+    <script src="./swagger-ui-bundle.js"> </script>
+    <script src="./swagger-ui-standalone-preset.js"> </script>
+    <script>
+      window.onload = function () {
+        // Begin Swagger UI call region
+        loadSwagger('v3')
+      }
+
+      function loadSwagger(apiVersion='v3'){
+        const ui = SwaggerUIBundle({
+          url: `${apiVersion}.json`,
+          dom_id: '#swagger-ui',
+          deepLinking: true,
+          presets: [
+            SwaggerUIBundle.presets.apis,
+            SwaggerUIStandalonePreset
+          ],
+          plugins: [
+            SwaggerUIBundle.plugins.DownloadUrl
+          ],
+          layout: "BaseLayout"
+        })
+        // End Swagger UI call region
+
+        window.ui = ui
+      }
+    </script>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script>
+            $('.navlist a').on('click', function() {
+              $(".navlist").find(".active").removeClass("active");
+              $(this).parent().addClass("active");
+            });
+    </script>
+  </body>
+</html>
