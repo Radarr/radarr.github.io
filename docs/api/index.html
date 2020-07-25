@@ -8,8 +8,8 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="simple-sidebar.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../../img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16" />
     <style>
       html
       {
@@ -38,15 +38,15 @@
       <!-- Sidebar -->
       <nav id="sidebar">
         <div class="sidebar-header">
-          <img class="sidebar-header-logo" src="logo-full.png">
+          <img class="sidebar-header-logo" src="../../img/logo-full.png">
         </div>
 
         <ul class="navlist list-unstyled components">
           <li>
-              <a href="javascript:void(0)" onclick='loadSwagger("v0")'>v0.2 API Docs</a>
+              <a href="javascript:void(0)" onclick='loadSwagger("https://raw.githubusercontent.com/Radarr/Radarr/aphrodite/src/NzbDrone.Api/swagger.json")'>v0.2 API Docs</a>
           </li>
           <li class="active">
-              <a href="javascript:void(0)" onclick='loadSwagger("v3")'>v3.0 API Docs</a>
+              <a href="javascript:void(0)" onclick='loadSwagger("https://raw.githubusercontent.com/Radarr/Radarr/aphrodite/src/Radarr.Api.V3/swagger.json")'>v3.0 API Docs</a>
           </li>
         </ul>
 
@@ -71,12 +71,12 @@
     <script>
       window.onload = function () {
         // Begin Swagger UI call region
-        loadSwagger('v3')
+        loadSwagger('https://raw.githubusercontent.com/Radarr/Radarr/aphrodite/src/Radarr.Api.V3/swagger.json')
       }
 
-      function loadSwagger(apiVersion='v3'){
+      function loadSwagger(apiVersion){
         const ui = SwaggerUIBundle({
-          url: `${apiVersion}.json`,
+          url: `${apiVersion}`,
           dom_id: '#swagger-ui',
           deepLinking: true,
           presets: [

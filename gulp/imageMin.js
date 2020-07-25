@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var print = require('gulp-print');
+var print = require('gulp-print').default;
 var imagemin = require('gulp-imagemin');
 
 gulp.task('imageMin', function () {

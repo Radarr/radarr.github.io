@@ -29,9 +29,3 @@ _ReSharper*/
 
 node_modules/*
 .idea/workspace.xml
-
-*.php
-builds/
-error_log
-stripe/
-.ftpquota

@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
-var print = require('gulp-print');
+var print = require('gulp-print').default;
 
 var errorHandler = require('./errorHandler');
 
