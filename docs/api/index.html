@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Swagger UI</title>
+    <title>Radarr API Docs</title>
     <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -43,10 +43,10 @@
 
         <ul class="navlist list-unstyled components">
           <li>
-              <a href="javascript:void(0)" onclick='loadSwagger("https://raw.githubusercontent.com/Radarr/Radarr/aphrodite/src/NzbDrone.Api/swagger.json")'>v0.2 API Docs</a>
+              <a href="javascript:void(0)" onclick='loadSwagger("https://raw.githubusercontent.com/Radarr/Radarr/develop/src/NzbDrone.Api/swagger.json")'>v0.2 API Docs</a>
           </li>
           <li class="active">
-              <a href="javascript:void(0)" onclick='loadSwagger("https://raw.githubusercontent.com/Radarr/Radarr/aphrodite/src/Radarr.Api.V3/swagger.json")'>v3.0 API Docs</a>
+              <a href="javascript:void(0)" onclick='loadSwagger("https://raw.githubusercontent.com/Radarr/Radarr/develop/src/Radarr.Api.V3/swagger.json")'>v3.0 API Docs</a>
           </li>
         </ul>
 
@@ -71,7 +71,7 @@
     <script>
       window.onload = function () {
         // Begin Swagger UI call region
-        loadSwagger('https://raw.githubusercontent.com/Radarr/Radarr/aphrodite/src/Radarr.Api.V3/swagger.json')
+        loadSwagger('https://raw.githubusercontent.com/Radarr/Radarr/develop/src/Radarr.Api.V3/swagger.json')
       }
 
       function loadSwagger(apiVersion){
