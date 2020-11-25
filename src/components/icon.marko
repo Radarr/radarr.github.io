@@ -1,0 +1,1 @@
+<if(input.icon)><if(input.icon.startsWith('./'))><img src=`${input.icon.substring(2)}` class=`icon${input.icon.endsWith('.svg')?' svg':''}` /></if><else><i class=`${input.icon.replace('-', ' fa-')}`></i></else></if>

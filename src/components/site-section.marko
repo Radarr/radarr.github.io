@@ -1,0 +1,19 @@
+<if(input.id || input.class)>
+    <div id=input.id class=input.class>
+        <div class="container">
+            <if(input.title)>
+                <div class="section-header">
+                    <h3>${input.title}</h3>
+                </div>
+            </if>
+            <if(input.file)>
+                <${require('../sections/' + input.file)} />
+            </if>
+            <${input.renderBody} />
+        </div>
+    </div>
+</if>
+<else-if(input.file)>
+    <${require('../sections/' + input.file)} />
+</else-if>
+<${input.renderBody} />
