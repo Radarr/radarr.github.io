@@ -1,0 +1,33 @@
+<install-steps>
+    <install-step title="Introduction">
+        <p>
+            Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.
+        </p>
+        <p>
+            A Windows Service runs even when the user is not logged in, but special case must be taken since Windows Services cannot access network drives (\\server\share or X:\ mapped drives) without special configuration steps.<br/>
+            It's therefore advisable to install Radarr as a system tray application if the user does not need to log out, the option to do so is provided during the installer.
+        </p>
+        <alert level="warning">Radarr v3 no longer supports Windows XP. At this time Windows 7 <i>should</i> still work, but we will not maintain Windows 7 support.</alert>
+        <migration-alert>
+            Radarr v3 will automatically convert the existing Radarr v0.2 installation. Radarr v0.2 already used <code>C:\ProgramData\Radarr</code>, which will be automatically converted to v3 on startup.
+            It's advisable to make a backup of the v0.2 data first.
+        </migration-alert>
+    </install-step>
+    <install-step num="1" title="Install Radarr">
+        <p>
+            Download the Windows Installer with the following link and execute it.
+        </p>
+        <a class="btn btn-radarr" href="https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true">Download Windows Installer</a>
+    </install-step>
+    <install-step num="2" title="View Radarr">
+        <p>
+            Browse to <code>http://localhost:7878</code> to start using Radarr.
+        </p>
+    </install-step>    
+</install-steps>
+<install-alternatives id="downloads-v3-windows-alternatives">
+    <h5>Manual Install</h5>
+    <p>
+        It is possible to install Radarr manually using the <a href="https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64">.zip download</a>. However in that case you must manually deal with dependencies, installation and permissions.
+    </p>
+</install-alternatives>

@@ -1,0 +1,61 @@
+<dl class="install-steps">
+    <install-step title="Introduction">
+        <p>
+            The Radarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.<br/>
+            These instructions provide generic guidance that should apply to any Radarr Docker image.
+        </p>
+        <migration-alert>
+            Most docker containers use <code>/config</code> volume to mount the data directory and supply that path to Radarr as parameter.
+            Radarr v3 will convert the given directory on startup if a Radarr v0.2 database is found. It's advisable to make a backup of the v0.2 data first.
+        </migration-alert>
+    </install-step>
+    <install-step num="1" title="Avoid common pitfalls">
+        <h5>Volumes and Paths</h5>
+        <p>
+            There are two common problems with Docker volumes: Paths that differ between the Radarr and download client container and paths that prevent fast moves and hard links.<br/>
+            The first is a problem because the download client will report a download's path as <code>/torrents/My.Movie.2018/</code>, but in the Radarr container that might be at
+            <code>/downloads/My.Movie.2018/</code>. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
+        </p>
+        <p>
+            Most Docker images suggest paths like <code>/movies</code> and <code>/downloads</code>. This causes slow moves and doesn't allow hard links because they
+            are considered two different file systems <i>inside</i> the container. Some also recommend paths for the download client container that are different from the Radarr container, like <code>/torrents</code>.<br/>
+            The best solution is to use a single, common volume <i>inside</i> the containers, such as <code>/data</code>.
+            Your Movies would be in <code>/data/Movies</code>, torrents in <code>/data/downloads/torrents</code> and/or usenet downloads in <code>/data/downloads/usenet</code>.
+        </p>
+        <p>
+            If this advice is not followed, you may have to configure a Remote Path Mapping in the Radarr web UI (Settings &rsaquo; Download Clients).
+        </p>
+        <h5>Ownership and Permissions</h5>
+        <p>
+            Permissions and ownership of files is one of the most common problems for Radarr users, both inside and outside Docker. Most images have environment variables that can be used to override
+            the default user, group and umask, you should decide this before setting up all of your containers. 
+            The recommendation is to use a common group for all related containers so that each container can use the shared group permissions to read and write files on the mounted volumes.<br/>
+            Keep in mind that Radarr will need read and write to the download folders as well as the final folders.
+        </p>
+        <p>
+            <i>For a more detailed explanation of these issues, see <a href="https://wiki.servarr.com/Docker_Guide">The Best Docker Setup and Docker Guide</a> wiki article.</i>
+        </p>
+    </install-step>
+    <install-step num="2" title="Install Radarr">
+        <p>
+            To install and use these Docker images, you'll need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation
+            and maintenance of them will depend on the route you choose.
+            <ul>
+            <li>
+                <h5><a href="https://hub.docker.com/r/linuxserver/radarr">linuxserver/radarr:latest</a></h5>
+                <p>
+                    <a href="//www.linuxserver.io">linuxserver.io</a> is one of the most prolific and popular Docker image maintainers. They also maintain images for most of the popular download clients as well.
+                    LinuxServer specifies a couple of default volumes such as <code>/movies</code> and <code>/downloads</code>. Our recommendation is to use a single volume for the data, as mentioned above.
+                </p>
+            </li>
+            <li>
+                <h5><a href="https://hub.docker.com/r/hotio/radarr">hotio/radarr:release</a></h5>
+                <p>
+                    <a href="https://hotio.dev">hotio</a> doesn't specify any default volumes, besides <code>/config</code>. Images are automatically updated 2x in 1 hour if upstream changes are found.
+                    Read the <a href="https://hotio.dev/containers/radarr">instructions</a> on how to install the image.
+                </p>
+            </li>
+            </ul>
+        </p>
+    </install-step>
+</dl>

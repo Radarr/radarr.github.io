@@ -3,13 +3,14 @@ var browserSync = require('browser-sync').create();
 
 
 require('./less.js');
+require('./marko.js');
 
-
-gulp.task('build', gulp.parallel('less'));
+gulp.task('build', gulp.parallel('less', 'marko'));
 
 gulp.task('watch', gulp.series('build', (done) => {
     gulp.watch(['css/*.less'], gulp.series('less'));
-
+    gulp.watch(['src/**/*.marko','*.marko'], gulp.series('marko'));
+    
     done();
 }));
 

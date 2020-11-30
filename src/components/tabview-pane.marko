@@ -1,0 +1,6 @@
+<div class=`tab-pane fade${(input.active ? ' active in' :'')}` id=input.id role="tabpanel">
+    <if(input.file)>
+    <${require('../sections/' + input.file)} />
+    </if>
+    <${input.renderBody} />
+</div>

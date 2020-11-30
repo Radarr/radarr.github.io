@@ -1,0 +1,23 @@
+<div class="row">
+    <ul class="nav nav-tabs nav-justified">
+        <tabview-item active href="#downloads-v3-windows" icon="fab-windows"> Windows</tabview-item>
+        <tabview-item href="#downloads-v3-linux" icon="fab-linux"> Linux</tabview-item>
+        <tabview-item href="#downloads-v3-macos" icon="fab-apple"> macOS</tabview-item>
+        <tabview-item href="#downloads-v3-nas" icon="fas-hdd"> NAS</tabview-item>
+        <tabview-item href="#downloads-v3-docker" icon="fab-docker"> Docker</tabview-item>
+        <tabview-item href="#downloads-v3-other" icon="fas-ellipsis-v">&nbsp;&nbsp;Others</tabview-item>
+    </ul>
+    <div class="tab-content" id="downloads-v3-tabcontent">
+        <tabview-pane active id="downloads-v3-windows" file="downloads-v3/windows.marko" />
+        <tabview-pane id="downloads-v3-linux" file="downloads-v3/linux.marko" />
+        <tabview-pane id="downloads-v3-macos" file="downloads-v3/macos.marko" />
+        <tabview-pane id="downloads-v3-nas" file="downloads-v3/nas.marko" />
+        <tabview-pane id="downloads-v3-docker" file="downloads-v3/docker.marko" />
+        <tabview-pane id="downloads-v3-other">
+            <alert level="info">
+                Please contact us if you wish to port Radarr v3 Beta for any other platform that the ones already listed.<br/>
+                Radarr v0.2 is supported by various third-parties on other platforms and we prefer to coordinate the port of v3.
+            </alert>
+        </tabview-pane>
+    </div>
+</div>

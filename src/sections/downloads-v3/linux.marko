@@ -1,0 +1,23 @@
+<div>
+    <ul class="nav nav-pills">
+        <tabview-item active pill href="#downloads-v3-linux-archlinux" icon="./logo/archlinux.svg"> ArchLinux</tabview-item>
+        <tabview-item pill href="#downloads-v3-linux-other" icon="fas-ellipsis-v">&nbsp;&nbsp;Others</tabview-item>
+    </ul>
+    <div class="tab-content" id="download-v3-linux-tabcontent">
+        <tabview-pane active id="downloads-v3-linux-archlinux" file="downloads-v3/linux-archlinux.marko" />
+        <tabview-pane id="downloads-v3-linux-other">
+            <install-description>
+                <alert level="info">
+                    Please contact us if you wish to port Radarr v3 Beta for any other distribution that the ones already listed.<br/>
+                    Radarr v0.2 is supported by various third-parties on other platforms and we prefer to coordinate the port of v3.
+                </alert>
+
+                <p>
+                    A generic download is available for linux, but dependencies, installation and permissions will need to be done manually.
+                </p>
+
+                <a class="btn btn-radarr" href="https://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64">Download Linux .tar.gz</a>
+            </install-description>
+        </tabview-pane>
+    </div>
+</div>
