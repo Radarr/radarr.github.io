@@ -172,7 +172,7 @@
                                     A Windows Service runs even when the user is not logged in, but special case must be taken since Windows Services cannot access network drives (\\server\share or X:\ mapped drives) without special configuration steps.<br>
                                     It's therefore advisable to install Radarr as a system tray application if the user does not need to log out, the option to do so is provided during the installer.
                                 </p>
-                                <div class="alert alert-warning">Radarr v3 no longer supports Windows XP. At this time Windows 7 <i>should</i> still work, but we will not maintain Windows 7 support.</div>
+                                <div class="alert alert-warning">Radarr v3 no longer supports Windows XP. At this time Windows 7 <i>should</i> still work, but we will not maintain Windows 7 support. Note that KB2533623 and Microsoft Visual C++ 2015 Redistributable Update 3 are needed to run .net core apps on Windows 7</div>
                                 <div class="alert alert-info">
                                     <h4 class=alert-heading>Radarr v0.2 migration</h4>
                                     Radarr v3 will automatically convert the existing Radarr v0.2 installation. Radarr v0.2 already used <code>C:\ProgramData\Radarr</code>, which will be automatically converted to v3 on startup.
@@ -184,7 +184,8 @@
                                 <p>
                                     Download the Windows Installer with the following link and execute it.
                                 </p>
-                                <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true>Download Windows Installer</a>
+                                <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true>Download Windows x64 Installer</a>
+                                <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true>Download Windows x86 Installer</a>
                             </dd>
                             <dt><span class=step>2</span>View Radarr</dt>
                             <dd>
@@ -198,7 +199,7 @@
                             <div class=collapse id=downloads-v3-windows-alternatives>
                                 <h5>Manual Install</h5>
                                 <p>
-                                    It is possible to install Radarr manually using the <a href=https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64>.zip download</a>. However in that case you must manually deal with dependencies, installation and permissions.
+                                    It is possible to install Radarr manually using the x64 <a href=https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64>.zip download</a>. However in that case you must manually deal with dependencies, installation and permissions.
                                 </p>
                             </div>
                         </div>
@@ -304,8 +305,7 @@ sudo systemctl enable --now radarr</code></pre>
                                     Open the archive and drag the Radarr icon to your Application folder.
                                 </p>
                                 <div class="alert alert-warning">
-                                    In macOS 10.12+ Gatekeeper App Translocation will prevent Radarr from updating if it's being run directly from the download location. Therefore it MUST be moved to the Application folder.
-                                </div>
+                                    Radarr v3 is not compatible with OSX versions < 10.13 due to netcore compatability. </div>
                             </dd>
                             <dt><span class=step>3</span>Start Radarr</dt>
                             <dd>
@@ -426,7 +426,7 @@ sudo systemctl enable --now radarr</code></pre>
                                     and maintenance of them will depend on the route you choose.
                                 <ul>
                                     <li>
-                                        <h5><a href=https://hub.docker.com/r/linuxserver/radarr>linuxserver/radarr:latest</a></h5>
+                                        <h5><a href=https://hub.docker.com/r/linuxserver/radarr>ghcr.io/linuxserver/radarr:latest</a></h5>
                                         <p>
                                             <a href=//www.linuxserver.io>linuxserver.io</a> is one of the most prolific and popular Docker image maintainers. They also maintain images for most of the popular download clients as well.
                                             LinuxServer specifies a couple of default volumes such as <code>/movies</code> and <code>/downloads</code>. Our recommendation is to use a single volume for the data, as mentioned above.
