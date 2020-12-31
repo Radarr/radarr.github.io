@@ -19,7 +19,7 @@
     <link rel=stylesheet type=text/css href=css/bootstrap-overrides.css?v=0032cb25c1f3202a92ff30daf9c072d5>
     <link rel=stylesheet type=text/css href=https://use.fontawesome.com/releases/v5.6.3/css/all.css integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ crossorigin=anonymous>
     <link rel=stylesheet type=text/css href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css>
-    <link rel=stylesheet type=text/css href=css/theme.css?v=b5c1b7e0338d42f7e94513b72b16aec7>
+    <link rel=stylesheet type=text/css href=css/theme.css?v=d11591a0a372f56d7b241b27a9fa0a31>
     <link href=//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic,700italic,900italic rel=stylesheet type=text/css>
     <link rel=stylesheet type=text/css href=//cdn.jsdelivr.net/animatecss/3.2.0/animate.min.css media="screen, projection">
     <link rel=icon type=image/ico href=img/favicon.ico>
@@ -273,9 +273,20 @@ sudo systemctl enable --now radarr</code></pre>
                                             Radarr v0.2 is supported by various third-parties on other platforms and we prefer to coordinate the port of v3.
                                         </div>
                                         <p>
-                                            A generic download is available for linux, but dependencies, installation and permissions will need to be done manually.
+                                            Generic .tar.gz downloads are available for linux, but dependencies, installation and permissions will need to be done manually.
                                         </p>
-                                        <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64>Download Linux .tar.gz</a>
+                                        <div>
+                                            <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64>Download Linux x64 (netcore)</a>
+                                        </div>
+                                        <div>
+                                            <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=arm>Download Linux arm (netcore)</a>
+                                        </div>
+                                        <div>
+                                            <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=arm64>Download Linux arm64 (netcore)</a>
+                                        </div>
+                                        <div>
+                                            <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=linuxmusl&runtime=netcore&arch=x64>Download Linux Musl x64 (netcore)</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

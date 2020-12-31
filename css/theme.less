@@ -2,6 +2,7 @@
 @import 'navbar';
 
 @droneTeal: #ecd65d;
+@buttonBlue: #35c5f4;
 
 html {
   margin: 0;
@@ -59,12 +60,14 @@ header {
 
 
 
-.btn-sonarr {
-  background-color: fade(@droneTeal, 20%);
-  border: 1px solid fade(@droneTeal, 50%);
+.btn-radarr {
+  background-color: fade(@buttonBlue, 20%);
+  border: 1px solid fade(@buttonBlue, 50%);
+  margin-bottom: 5px;
+  width: 300px;
   
   &:hover {
-    background-color: fade(@droneTeal, 30%);
+    background-color: fade(@buttonBlue, 30%);
   }
   
 }
