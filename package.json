@@ -22,9 +22,10 @@
     "gulp-imagemin": "7.1.0",
     "gulp-less": "4.0.1",
     "gulp-pretty-html": "^2.0.9",
-    "gulp-print": "^1.1.0",
-    "gulp-util": "^3.0.8",
-    "marko": "^4.14.18",
-    "through2": "^3.0.0"
+    "gulp-print": "^5.0.2",
+    "marko": "^4.23.10",
+    "plugin-error": "1.0.1",
+    "replace-ext": "2.0.0",
+    "through2": "^4.0.2"
   }
 }

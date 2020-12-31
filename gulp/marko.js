@@ -3,9 +3,9 @@ var prettyHtml = require('gulp-pretty-html');
 var marko = require('marko');
 var through2 = require('through2');
 var errorHandler = require('./errorHandler');
-var gutil = require('gulp-util');
+var replaceExt = require('replace-ext');
 var cachebust = require('gulp-cache-bust');
-var PluginError = gutil.PluginError;
+var PluginError = require('plugin-error');
 
 var markoCompilerOptions = {
     writeToDisk: false,
@@ -36,7 +36,7 @@ var markoRender = function(options) {
 			}
             
 			file.contents = Buffer.from(out.toString());
-			file.path = gutil.replaceExtension(file.path, ".html");
+			file.path = replaceExt(file.path, ".html");
 
 			_this.push(file);
 			cb(err);
