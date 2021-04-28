@@ -8,7 +8,6 @@
         <migration-alert>
             The Radarr v3 package will attempt to automatically migrate an existing Radarr v0.2 database.
             Radarr v0.2 used the user's home directory <code>~/.config/Radarr</code> to store the application data which v3 also uses.<br/>
-            It's advisable to make a backup of the v0.2 data before installing v3.
         </migration-alert>
     </install-step>
     <install-step num="1" title="Download App package">
@@ -19,16 +18,13 @@
             Open the archive and drag the Radarr icon to your Application folder.
         </p>
         <alert level="warning">
-            Radarr v3 is not compatible with OSX versions < 10.13 due to netcore compatability.
+            Radarr v3 is not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.
         </alert>
     </install-step>
     <install-step num="3" title="Start Radarr">
         <p>
             Open Radarr.app in your Application folder.
         </p>
-        <alert level="info">
-            During startup it may ask you to install the Mono Runtime if an appropriate version is not already installed.
-        </alert>
     </install-step>
     <install-step num="4" title="View Radarr">
         <p>
