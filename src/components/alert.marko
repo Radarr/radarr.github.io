@@ -1,1 +1,6 @@
-<div class=`alert alert-${input.level || 'default'}`><if(input.header)><h4 class="alert-heading">${input.header}</h4></if><${input.renderBody}/></div>
+<div class=`alert alert-${input.level || "default"}`>
+  <if(input.header)>
+    <h4 class="alert-heading">${input.header}</h4>
+  </if>
+  <${input.renderBody}/>
+</div>

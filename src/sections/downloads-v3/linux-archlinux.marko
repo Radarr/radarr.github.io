@@ -1,41 +1,55 @@
 <install-steps>
-    <install-step title="Introduction">
-        <p>
-            The Arch Linux User Repository offers a <a href="https://aur.archlinux.org/packages/radarr/">radarr</a> package that can be installed manually
-            or using your favorite <a href="https://wiki.archlinux.org/index.php/AUR_helpers">AUR helper</a>.
-        </p>
-        <migration-alert>
-            The existing radarr AUR packages already used <code>/var/lib/radarr</code> to store the Radarr database.
-            Radarr v3 will convert that directory automatically on startup.
-        </migration-alert>
-    </install-step>
-    <install-step num="1" title="Install Radarr">
-        <p>
-            An aur helper can install radarr and its dependencies easily, or follow the <a href="https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages">AUR Installing Packages</a> wiki for manual installation.
-        </p>
-        <p>
-            For example, to use <a href="https://github.com/Jguer/yay">yay</a> to install the radarr package:
-            <pre><code class="bash">yay -S radarr</code></pre>
-        </p>
-    </install-step>
-    <install-step num="2" title="Start Radarr">
-        <pre><code class="bash">sudo systemctl daemon-reload
+  <install-step title="Introduction">
+    <p>
+      The Arch Linux User Repository offers a
+      <a href="https://aur.archlinux.org/packages/radarr/">radarr</a>
+      package that can be installed manually
+      or using your favorite
+      <a href="https://wiki.archlinux.org/index.php/AUR_helpers">AUR helper</a>.
+    </p>
+    <migration-alert>
+      The existing radarr AUR packages already used
+      <code>/var/lib/radarr</code>
+      to store the Radarr database.
+      Radarr v3 will convert that directory automatically on startup.
+    </migration-alert>
+  </install-step>
+  <install-step num="1" title="Install Radarr">
+    <p>
+      An aur helper can install radarr and its dependencies easily, or follow the
+      <a href="https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages">AUR Installing Packages</a>
+      wiki for manual installation.
+    </p>
+    <p>
+      For example, to use
+      <a href="https://github.com/Jguer/yay">yay</a>
+      to install the radarr package:
+      <pre><code class="bash">yay -S radarr</code></pre>
+    </p>
+  </install-step>
+  <install-step num="2" title="Start Radarr">
+    <pre><code class="bash">sudo systemctl daemon-reload
 sudo systemctl enable --now radarr</code></pre>
-    </install-step>
-    <install-step num="3" title="View Radarr">
-        <p>
-            Browse to <code>http://localhost:7878</code> to start using Radarr.
-        </p>
-        <i>(Replace 'localhost' with your server IP if you're connecting remotely)</i>
-    </install-step>
+  </install-step>
+  <install-step num="3" title="View Radarr">
+    <p>
+      Browse to
+      <code>http://localhost:7878</code>
+      to start using Radarr.
+    </p>
+    <i>(Replace 'localhost' with your server IP if you're connecting remotely)</i>
+  </install-step>
 </install-steps>
 <install-alternatives id="downloads-v3-linux-archlinux-alternatives">
-    <h5>Manual Install</h5>
-    <p>
-        It is possible to install Radarr manually from upstream using the <a href="https://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64">.tar.gz download</a>. However in that case you must manually deal with dependencies, installation and permissions.
-    </p>
-    <h5>Docker container</h5>
-    <p>
-        You can follow the <a href="#downloads-v3-docker">Docker guide</a> to install Radarr as a Docker container instead.
-    </p>
+  <h5>Manual Install</h5>
+  <p>
+    It is possible to install Radarr manually from upstream using the
+    <a href="https://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64">.tar.gz download</a>. However in that case you must manually deal with dependencies, installation and permissions.
+  </p>
+  <h5>Docker container</h5>
+  <p>
+    You can follow the
+    <a href="#downloads-v3-docker">Docker guide</a>
+    to install Radarr as a Docker container instead.
+  </p>
 </install-alternatives>
