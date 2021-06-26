@@ -19,7 +19,7 @@
     <link rel=stylesheet type=text/css href=css/bootstrap-overrides.css?v=0032cb25c1f3202a92ff30daf9c072d5>
     <link rel=stylesheet type=text/css href=https://use.fontawesome.com/releases/v5.6.3/css/all.css integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ crossorigin=anonymous>
     <link rel=stylesheet type=text/css href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css>
-    <link rel=stylesheet type=text/css href=css/theme.css?v=12a462d8fdd8b5c2dbe41f04823e32f4>
+    <link rel=stylesheet type=text/css href=css/theme.css?v=d41d8cd98f00b204e9800998ecf8427e>
     <link href=//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic,700italic,900italic rel=stylesheet type=text/css>
     <link rel=stylesheet type=text/css href=//cdn.jsdelivr.net/animatecss/3.2.0/animate.min.css media="screen, projection">
     <link rel=icon type=image/ico href=img/favicon.ico>
@@ -240,7 +240,7 @@
                                 <p>
                                     A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives) without special configuration steps.<br>
                                     Additionally the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.<br>
-                                    It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
+                                    'Local Service' also generally has very limited permissions. It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
                                 </p>
                                 <div class="alert alert-warning">
                                     Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration.
@@ -248,7 +248,7 @@
                                 <div class="alert alert-info">
                                     <h4 class=alert-heading>Radarr v0.2 migration</h4>
                                     Radarr v3 will automatically convert the existing Radarr v0.2 installation. Radarr v0.2 already used
-                                    <code>C:\\\\ProgramData\\\\Radarr</code>, which will be automatically converted to v3 on startup.
+                                    <code>C:\ProgramData\Radarr</code>, which will be automatically converted to v3 on startup.
                                 </div>
                             </dd>
                             <dt>
@@ -678,7 +678,7 @@ sudo systemctl enable --now radarr</code></pre>
                 <h3>Support</h3>
             </div>
             <div class=row>
-                <a class=col-sm-3 href=https://wiki.servarr.com target=_blank>
+                <a class=col-sm-3 href=https://wiki.servarr.com/radarr target=_blank>
                     <div class=text>
                         <i class="far fa-lightbulb fa-2x"></i>
                         <h4>Wiki</h4>
