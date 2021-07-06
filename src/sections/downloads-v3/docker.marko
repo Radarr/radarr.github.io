@@ -49,7 +49,7 @@
     <p>
       <i>
   For a more detailed explanation of these issues, see
-        <a href="https://wiki.servarr.com/Docker_Guide">The Best Docker Setup and Docker Guide</a>
+        <a href="https://wiki.servarr.com/docker-guide">The Best Docker Setup and Docker Guide</a>
         wiki article.
       </i>
     </p>
@@ -66,7 +66,7 @@
           <p>
             <a href="https://hotio.dev">hotio</a>
             doesn't specify any default volumes, besides
-            <code>/config</code>. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests which may be useful for testing.
+            <code>/config</code>. Images are automatically updated multiple times in an hour if upstream changes are found. Hotio also builds our Pull Requests which may be useful for testing.
             Read the
             <a href="https://hotio.dev/containers/radarr">instructions</a>
             on how to install the image.
@@ -79,7 +79,7 @@
           <p>
             <a href="https://www.linuxserver.io">linuxserver.io</a>
             is one of the most prolific and popular Docker image maintainers. They also maintain images for most of the popular download clients as well.
-            LinuxServer specifies a couple of default volumes such as
+            LinuxServer specifies a couple of optional default volumes such as
             <code>/movies</code>
             and
             <code>/downloads</code>. The default volumes are not optimal nor recommended. Our recommendation is to use a single volume for the data, as mentioned above.

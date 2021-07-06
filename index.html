@@ -238,17 +238,17 @@
                             <dd>
                                 <p>Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.</p>
                                 <p>
-                                    A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives) without special configuration steps.<br>
+                                    A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives or \\server\share UNC paths) without special configuration steps.<br>
                                     Additionally the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.<br>
-                                    It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
+                                    'Local Service' also generally has very limited permissions. It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
                                 </p>
                                 <div class="alert alert-warning">
-                                    Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration.
+                                    Radarr is supported on Windows 8.1 and Server 2012 or later. Pre-release or earlier versions of Windows are not supported.
                                 </div>
                                 <div class="alert alert-info">
                                     <h4 class=alert-heading>Radarr v0.2 migration</h4>
                                     Radarr v3 will automatically convert the existing Radarr v0.2 installation. Radarr v0.2 already used
-                                    <code>C:\\\\ProgramData\\\\Radarr</code>, which will be automatically converted to v3 on startup.
+                                    <code>C:\ProgramData\Radarr</code>, which will be automatically converted to v3 on startup.
                                 </div>
                             </dd>
                             <dt>
@@ -390,7 +390,7 @@ sudo systemctl enable --now radarr</code></pre>
                                         <dd>
                                             <p>
                                                 The community has put together an
-                                                <a href=https://wiki.servarr.com/Radarr_Installation#Debian.2FUbuntu>Installation Guide</a>
+                                                <a href=https://wiki.servarr.com/radarr/installation#linux>Installation Guide</a>
                                                 to help you install this on Debian or Ubuntu.
                                             </p>
                                             <div class="alert alert-info">
@@ -598,7 +598,7 @@ sudo systemctl enable --now radarr</code></pre>
                                 <p>
                                     <i>
   For a more detailed explanation of these issues, see
-        <a href=https://wiki.servarr.com/Docker_Guide>The Best Docker Setup and Docker Guide</a>
+        <a href=https://wiki.servarr.com/docker-guide>The Best Docker Setup and Docker Guide</a>
         wiki article.
       </i>
                                 </p>
@@ -619,7 +619,7 @@ sudo systemctl enable --now radarr</code></pre>
                                         <p>
                                             <a href=https://hotio.dev>hotio</a>
                                             doesn't specify any default volumes, besides
-                                            <code>/config</code>. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests which may be useful for testing.
+                                            <code>/config</code>. Images are automatically updated multiple times in an hour if upstream changes are found. Hotio also builds our Pull Requests which may be useful for testing.
                                             Read the
                                             <a href=https://hotio.dev/containers/radarr>instructions</a>
                                             on how to install the image.
@@ -632,7 +632,7 @@ sudo systemctl enable --now radarr</code></pre>
                                         <p>
                                             <a href=https://www.linuxserver.io>linuxserver.io</a>
                                             is one of the most prolific and popular Docker image maintainers. They also maintain images for most of the popular download clients as well.
-                                            LinuxServer specifies a couple of default volumes such as
+                                            LinuxServer specifies a couple of optional default volumes such as
                                             <code>/movies</code>
                                             and
                                             <code>/downloads</code>. The default volumes are not optimal nor recommended. Our recommendation is to use a single volume for the data, as mentioned above.
@@ -678,7 +678,7 @@ sudo systemctl enable --now radarr</code></pre>
                 <h3>Support</h3>
             </div>
             <div class=row>
-                <a class=col-sm-3 href=https://wiki.servarr.com target=_blank>
+                <a class=col-sm-3 href=https://wiki.servarr.com/radarr target=_blank>
                     <div class=text>
                         <i class="far fa-lightbulb fa-2x"></i>
                         <h4>Wiki</h4>
