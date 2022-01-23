@@ -76,7 +76,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href=https://opencollective.com/radarr>
+                        <a href=/donate>
                             <i class="fas fa-heart"></i>
                             DONATE
                         </a>
@@ -733,6 +733,11 @@ sudo systemctl enable --now radarr</code></pre>
     </script>
     <script src=js/theme.js?v=453b4ff1a4f41c49315a28f79aa5ea83></script>
     <script type=text/javascript src=js/index-slider.js?v=48ba37f65a8c9499e4833ad1924fccb7></script>
+    <script type=text/javascript>
+        if (window.location.hash.toLocaleLowerCase() === "#donate") {
+            window.location.replace("https://radarr.video/donate");
+        }
+    </script>
 </body>
 
 </html>
