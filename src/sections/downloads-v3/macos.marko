@@ -16,10 +16,13 @@
     <p>Open the archive and drag the Radarr icon to your Application folder.</p>
     <alert level="warning">Radarr v4 is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities.</alert>
   </install-step>
-  <install-step num="3" title="Start Radarr">
+  <install-step num="3" title="Self-sign Radarr">
+    <p>Self-sign Radarr `codesign --force --deep -s - Radarr.app`</p>
+  </install-step>
+  <install-step num="4" title="Start Radarr">
     <p>Open Radarr.app in your Application folder.</p>
   </install-step>
-  <install-step num="4" title="View Radarr">
+  <install-step num="5" title="View Radarr">
     <p>
       Browse to
       <code>http://localhost:7878</code>
