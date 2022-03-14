@@ -43,7 +43,7 @@
 
         <ul class="navlist list-unstyled components">
           <li class="active">
-              <a href="javascript:void(0)" onclick='loadSwagger("https://raw.githubusercontent.com/Radarr/Radarr/develop/src/Radarr.Api.V3/swagger.json")'>v3 API Docs</a>
+              <a href="javascript:void(0)" onclick='loadSwagger("https://raw.githubusercontent.com/Radarr/Radarr/develop/src/Radarr.Api.V3/openapi.json")'>v3 API Docs</a>
           </li>
         </ul>
 
@@ -68,7 +68,7 @@
     <script>
       window.onload = function () {
         // Begin Swagger UI call region
-        loadSwagger('https://raw.githubusercontent.com/Radarr/Radarr/develop/src/Radarr.Api.V3/swagger.json')
+        loadSwagger('https://raw.githubusercontent.com/Radarr/Radarr/develop/src/Radarr.Api.V3/openapi.json')
       }
 
       function loadSwagger(apiVersion){
