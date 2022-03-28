@@ -1,30 +1,13 @@
 <install-steps>
-  <install-step title="Introduction">
-    <p>Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.</p>
+  <install-step title="Installation">
     <p>
-      A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives or \\server\share UNC paths) without special configuration steps.<br/>
-      Additionally the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.<br/>
-      'Local Service' also generally has very limited permissions. It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
+      Please see our Servarr Wiki for
+      <a href="https://wiki.servarr.com/radarr/installation#windows"> installation instructions.</a>
     </p>
-    <alert level="warning">
-      Radarr is supported on Windows 8.1 and Server 2012 or later. Pre-release or earlier versions of Windows are not supported.
-    </alert>
-    <migration-alert>
-      Radarr v3 will automatically convert the existing Radarr v0.2 installation. Radarr v0.2 already used
-      <code>C:\ProgramData\Radarr</code>, which will be automatically converted to v3 on startup.
-    </migration-alert>
-  </install-step>
-  <install-step num="1" title="Install Radarr">
-    <p>Download the Windows Installer with the following link and execute it.</p>
-    <a class="btn btn-radarr" href="https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true">Download Windows x64 Installer</a>
-    <a class="btn btn-radarr" href="https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true">Download Windows x86 Installer</a>
-  </install-step>
-  <install-step num="2" title="View Radarr">
-    <p>
-      Browse to
-      <code>http://localhost:7878</code>
-      to start using Radarr.
-    </p>
+  <p>Download the Windows Installer with the following link and execute it.</p>
+  <a class="btn btn-radarr" href="https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true">Download Windows x64 Installer</a>
+  <a class="btn btn-radarr" href="https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true">Download Windows x86 Installer</a>
+    <migration-alert>Radarr v4 will convert any existing v0.2 or v3 directory automatically on startup.</migration-alert>
   </install-step>
 </install-steps>
 <install-alternatives id="downloads-v3-windows-alternatives">

@@ -19,7 +19,7 @@
     <link rel=stylesheet type=text/css href=css/bootstrap-overrides.css?v=0032cb25c1f3202a92ff30daf9c072d5>
     <link rel=stylesheet type=text/css href=https://use.fontawesome.com/releases/v5.6.3/css/all.css integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ crossorigin=anonymous>
     <link rel=stylesheet type=text/css href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css>
-    <link rel=stylesheet type=text/css href=css/theme.css?v=d41d8cd98f00b204e9800998ecf8427e>
+    <link rel=stylesheet type=text/css href=css/theme.css?v=12a462d8fdd8b5c2dbe41f04823e32f4>
     <link href=//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic,700italic,900italic rel=stylesheet type=text/css>
     <link rel=stylesheet type=text/css href=//cdn.jsdelivr.net/animatecss/3.2.0/animate.min.css media="screen, projection">
     <link rel=icon type=image/ico href=img/favicon.ico>
@@ -233,43 +233,20 @@
                     <div class="tab-pane fade active in" id=downloads-v3-windows role=tabpanel>
                         <dl class=install-steps>
                             <dt>
-                                Introduction
+                                Installation
                             </dt>
                             <dd>
-                                <p>Radarr is supported natively on Windows. Radarr can be installed on Windows as Windows Service or system tray application.</p>
                                 <p>
-                                    A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives or \\server\share UNC paths) without special configuration steps.<br>
-                                    Additionally the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.<br>
-                                    'Local Service' also generally has very limited permissions. It's therefore advisable to install Radarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
+                                    Please see our Servarr Wiki for
+                                    <a href=https://wiki.servarr.com/radarr/installation#windows> installation instructions.</a>
                                 </p>
-                                <div class="alert alert-warning">
-                                    Radarr is supported on Windows 8.1 and Server 2012 or later. Pre-release or earlier versions of Windows are not supported.
-                                </div>
-                                <div class="alert alert-info">
-                                    <h4 class=alert-heading>Radarr v0.2 migration</h4>
-                                    Radarr v3 will automatically convert the existing Radarr v0.2 installation. Radarr v0.2 already used
-                                    <code>C:\ProgramData\Radarr</code>, which will be automatically converted to v3 on startup.
-                                </div>
-                            </dd>
-                            <dt>
-                                <span class=step>1</span>
-                                Install Radarr
-                            </dt>
-                            <dd>
                                 <p>Download the Windows Installer with the following link and execute it.</p>
                                 <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true>Download Windows x64 Installer</a>
                                 <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true>Download Windows x86 Installer</a>
-                            </dd>
-                            <dt>
-                                <span class=step>2</span>
-                                View Radarr
-                            </dt>
-                            <dd>
-                                <p>
-                                    Browse to
-                                    <code>http://localhost:7878</code>
-                                    to start using Radarr.
-                                </p>
+                                <div class="alert alert-info">
+                                    <h4 class=alert-heading>Radarr v0.2 and v3 migration</h4>
+                                    Radarr v4 will convert any existing v0.2 or v3 directory automatically on startup.
+                                </div>
                             </dd>
                         </dl>
                         <div class=install-alternatives>
@@ -320,11 +297,11 @@
                                                 <a href=https://wiki.archlinux.org/index.php/AUR_helpers>AUR helper</a>.
                                             </p>
                                             <div class="alert alert-info">
-                                                <h4 class=alert-heading>Radarr v0.2 migration</h4>
+                                                <h4 class=alert-heading>Radarr v0.2 and v3 migration</h4>
                                                 The existing radarr AUR packages already used
                                                 <code>/var/lib/radarr</code>
                                                 to store the Radarr database.
-                                                Radarr v3 will convert that directory automatically on startup.
+                                                Radarr v4 will convert that directory automatically on startup.
                                             </div>
                                         </dd>
                                         <dt>
@@ -389,13 +366,12 @@ sudo systemctl enable --now radarr</code></pre>
                                         </dt>
                                         <dd>
                                             <p>
-                                                The community has put together an
-                                                <a href=https://wiki.servarr.com/radarr/installation#linux>Installation Guide</a>
-                                                to help you install this on Debian or Ubuntu.
+                                                Please see our Servarr Wiki for installation instructions.
+                                                <a href=https://wiki.servarr.com/radarr/installation#linux>Link</a>
                                             </p>
                                             <div class="alert alert-info">
-                                                <h4 class=alert-heading>Radarr v0.2 migration</h4>
-                                                Radarr v3 will convert any existing v0.2 directory automatically on startup.
+                                                <h4 class=alert-heading>Radarr v0.2 and v3 migration</h4>
+                                                Radarr v4 will convert any existing v0.2 or v3 directory automatically on startup.
                                             </div>
                                         </dd>
                                     </dl>
@@ -403,8 +379,8 @@ sudo systemctl enable --now radarr</code></pre>
                                 <div class="tab-pane fade" id=downloads-v3-linux-other role=tabpanel>
                                     <div class=install-description>
                                         <div class="alert alert-info">
-                                            Please contact us if you wish to port Radarr v3 for any other distribution that the ones already listed.<br>
-                                            Radarr v0.2 was supported by various third-parties on other platforms and we prefer to coordinate the port of v3.
+                                            Please contact us if you wish to port Radarr v4 for any other distribution that the ones already listed.<br>
+                                            Radarr v0.2 was supported by various third-parties on other platforms and we prefer to coordinate the port of v4.
                                         </div>
                                         <p>Generic .tar.gz downloads are available for linux, but dependencies, installation and permissions will need to be done manually.</p>
                                         <div>
@@ -432,11 +408,11 @@ sudo systemctl enable --now radarr</code></pre>
                             <dd>
                                 <p>The easiest way to install Radarr on macOS is to use the App archive with the steps described below.</p>
                                 <div class="alert alert-info">
-                                    <h4 class=alert-heading>Radarr v0.2 migration</h4>
-                                    The Radarr v3 package will attempt to automatically migrate an existing Radarr v0.2 database.
+                                    <h4 class=alert-heading>Radarr v0.2 and v3 migration</h4>
+                                    The Radarr v4 package will attempt to automatically migrate an existing Radarr v0.2 or v3 database.
                                     Radarr v0.2 used the user's home directory
                                     <code>~/.config/Radarr</code>
-                                    to store the application data which v3 also uses.<br>
+                                    to store the application data which v4 also uses.<br>
                                 </div>
                             </dd>
                             <dt>
@@ -453,17 +429,24 @@ sudo systemctl enable --now radarr</code></pre>
                             <dd>
                                 <p>Open the archive and drag the Radarr icon to your Application folder.</p>
                                 <div class="alert alert-warning">
-                                    Radarr v3 is not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities. </div>
+                                    Radarr v4 is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities. </div>
                             </dd>
                             <dt>
                                 <span class=step>3</span>
+                                Self-sign Radarr
+                            </dt>
+                            <dd>
+                                <p>Self-sign Radarr `codesign --force --deep -s - Radarr.app`</p>
+                            </dd>
+                            <dt>
+                                <span class=step>4</span>
                                 Start Radarr
                             </dt>
                             <dd>
                                 <p>Open Radarr.app in your Application folder.</p>
                             </dd>
                             <dt>
-                                <span class=step>4</span>
+                                <span class=step>5</span>
                                 View Radarr
                             </dt>
                             <dd>
@@ -514,15 +497,17 @@ sudo systemctl enable --now radarr</code></pre>
                             <div class=tab-content id=download-v3-nas-tabcontent>
                                 <div class="tab-pane fade active in" id=downloads-v3-nas-synology role=tabpanel>
                                     <div class="alert alert-info">
-                                        A V3 package and installation instructions are provided by SynoCommunity at:
+                                        A NAS package and installation instructions are provided by SynoCommunity at:
                                         <a href=https://synocommunity.com/package/radarr>https://synocommunity.com/package/radarr</a>.
                                         Please note that the SynoCommunity typically has signifcant lag in providing updated packages, thus you may want to check out Docker.
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id=downloads-v3-nas-qnap role=tabpanel>
                                     <div class="alert alert-info">
-                                        The Radarr v0.2 Qnap port was maintained by the Qnap forum community.<br>
-                                        Please contact us if you wish to maintain a v3 package so that we can include the appropriate install instructions.
+                                        A NAS packages that requires a paid dependency is created by the QNAP community<br>
+                                        <a href=https://www.qnapclub.eu/en/qpkg/1007>https://www.qnapclub.eu/en/qpkg/1007</a>.
+                                        Please note that the QNAP Community typically has signifcant lag in providing updated packages, thus you may want to check out Docker.
+                                        Additionally, the QNAP Community requires a paid dependency which the Radarr Team does not condone.
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id=downloads-v3-nas-other role=tabpanel>
@@ -549,11 +534,11 @@ sudo systemctl enable --now radarr</code></pre>
                                     These instructions provide generic guidance that should apply to any Radarr Docker image.
                                 </p>
                                 <div class="alert alert-info">
-                                    <h4 class=alert-heading>Radarr v0.2 migration</h4>
+                                    <h4 class=alert-heading>Radarr v0.2 and v3 migration</h4>
                                     Most docker containers use
                                     <code>/config</code>
                                     volume to mount the data directory and supply that path to Radarr as parameter.
-                                    Radarr v3 will convert the given directory on startup if a Radarr v0.2 database is found.
+                                    Radarr v4 will convert the given directory on startup if a Radarr v0.2 or v3 database is found.
                                 </div>
                             </dd>
                             <dt>
@@ -614,7 +599,7 @@ sudo systemctl enable --now radarr</code></pre>
                                 <ul>
                                     <li>
                                         <h5>
-                                            <a href=https://ghcr.io/hotio/radarr:latest>ghcr.io/hotio/radarr:release</a>
+                                            <a href=https://hotio.dev/containers/radarr/>hotio/radarr:release</a>
                                         </h5>
                                         <p>
                                             <a href=https://hotio.dev>hotio</a>
@@ -627,10 +612,10 @@ sudo systemctl enable --now radarr</code></pre>
                                     </li>
                                     <li>
                                         <h5>
-                                            <a href=https://ghcr.io/linuxserver/radarr:latest>ghcr.io/linuxserver/radarr:latest</a>
+                                            <a href=https://docs.linuxserver.io/images/docker-radarr>lscr.io/linuxserver/radarr:latest</a>
                                         </h5>
                                         <p>
-                                            <a href=https://www.linuxserver.io>linuxserver.io</a>
+                                            <a href=https://docs.linuxserver.io/images/docker-radarr>linuxserver.io</a>
                                             is one of the most prolific and popular Docker image maintainers. They also maintain images for most of the popular download clients as well.
                                             LinuxServer specifies a couple of optional default volumes such as
                                             <code>/movies</code>
@@ -651,13 +636,13 @@ sudo systemctl enable --now radarr</code></pre>
                             <dd>
                                 <p>
                                     The Radarr team provides
-                                    <a href=https://radarr.servarr.com/v1/update/master/updatefile?os=bsd&arch=x64&runtime=netcore>builds for BSD</a>.<br>
-                                    Additional details can be found on Frank's GH
-                                    <a href=https://github.com/Thefrank/freebsd-port-sooners/blob/main/Radarr_Installation_TrueNAS_GUI.md/>Link</a>
+                                    <a href=https://radarr.servarr.com/v1/update/master/updatefile?os=bsd&arch=x64&runtime=netcore>builds for BSD and the BSD Community creates the Port</a>.<br>
+                                    Please see our Servarr Wiki for installation instructions.
+                                    <a href=https://wiki.servarr.com/radarr/installation#freebsd>Link</a>
                                 </p>
                                 <div class="alert alert-info">
-                                    <h4 class=alert-heading>Radarr v0.2 migration</h4>
-                                    Radarr v3 will convert any existing v0.2 directory automatically on startup.
+                                    <h4 class=alert-heading>Radarr v0.2 and v3 migration</h4>
+                                    Radarr v4 will convert any existing v0.2 or v3 directory automatically on startup.
                                 </div>
                             </dd>
                         </dl>
