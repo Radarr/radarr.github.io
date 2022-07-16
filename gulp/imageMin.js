@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var print = require('gulp-print');
-var imagemin = require('gulp-imagemin');
+
+const imagemin = (import('gulp-imagemin')).default;
 
 gulp.task('imageMin', function () {
     return gulp.src('img/**')
