@@ -1,64 +1,103 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Radarr - Donate</title>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
-      <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-      <link rel="stylesheet" type="text/css" href="css/donate.css" />
-      <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css' />
-      <link rel="icon" type="image/ico" href="img/favicon.ico" />
-      <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <![endif]-->
-   </head>
-   <body class="pull_top" data-spy="scroll" data-target=".header-navbar" data-offset="70">
-      <div class="container">
-         <div class="row">
-            <div id="donate" class="donate col-lg-6 offset-md-3">
-               <div class="section-header">
-                  <img src="logo/128.png">
-                  <h1><i class="fa fa-heart"></i> Awww, We love you too!</h1>
-                  <span>Your donations will help support Radarr, we promise to put it to good use.</span>
+
+<head>
+   <title>Radarr - Donate</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+   <link rel="stylesheet" type="text/css"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+   <link rel="stylesheet" type="text/css" href="css/donate.css" />
+   <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css' />
+   <link rel="icon" type="image/ico" href="img/favicon.ico" />
+</head>
+
+<!-- bitcoin modal -->
+<div class="modal fade" id="bitcoinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+   aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Donate Bitcoin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <a href="bitcoin:3QCJp3uEmfwffShoNDoZLPmvNuwQRgMM32?label=Radarr">
+               <img
+                  src="data:image/png;base64,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"
+                  alt="3QCJp3uEmfwffShoNDoZLPmvNuwQRgMM32" />
+            </a>
+            </br>
+            <div class="input-group mb-3">
+               <input type="text" class="form-control" id="bitcoin-address" value="3QCJp3uEmfwffShoNDoZLPmvNuwQRgMM32"
+                  readonly="true">
+               <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="copy-button"
+                     data-clipboard-target="#bitcoin-address">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
                </div>
-               <div class="row">
-                  <div class="col-lg-8 offset-md-2">
-                     <form method="POST" action="https://donate.servarr.com/api/v1/invoices"
-                        class="btcpay-form btcpay-form--block" id="form1">
-                        <input type="hidden" name="storeId" value="7onQpMoULtUT6Zouco9BjasB4PYNtbiMS7BLrErwPMmh">
-                        <input type="hidden" name="currency" value="USD">
-                        <div class="input-group input-group-lg price">
-                           <div class="input-group-prepend">
-                              <span class="input-group-text">$</span>
-                           </div>
-                           <input type="number" class="form-control" name="price" min="0"
-                              value="5">
-                        </div>
-                        <button type="submit" class="submit btn btn-lg btn-block bitcoin" name="submit"> <i class="fa fa-btc"></i> Donate Bitcoins</button>
-                     </form>
-                  </div>
-                  <div class="col-lg-8 offset-md-2 center">
-                     <p class="text-center">OR</p>
-                  </div>
-                  <div class="col-lg-8 offset-md-2"> <a href="https://opencollective.com/radarr" class="open-collective" target="_blank">
-                     <button id="donate-stripe" class="btn btn-lg btn-block btn-success" type="button">
-                     <i class="fa fa-credit-card"></i>  OpenCollective
+            </div>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- /bitcoin modal -->
+
+<body class="pull_top" data-spy="scroll" data-target=".header-navbar" data-offset="70">
+   <div class="container">
+      <div class="row">
+         <div id="donate" class="donate col-lg-6 offset-md-3">
+            <div class="section-header">
+               <img src="logo/128.png">
+               <h1><i class="fa fa-heart"></i> Awww, We love you too!</h1>
+               <span>Your donations will help support Radarr, we promise to put it to good use.</span>
+            </div>
+            <div class="row">
+               <div class="col-lg-8 offset-md-2">
+                  <button type="button" class="btn btn-lg btn-block bitcoin donate-option" data-toggle="modal"
+                     data-target="#bitcoinModal">
+                     <i class="fa fa-btc"></i> Donate Bitcoins
+                  </button>
+               </div>
+               <div class="col-lg-8 offset-md-2 center">
+                  <p class="text-center">OR</p>
+               </div>
+               <div class="col-lg-8 offset-md-2"> <a href="https://opencollective.com/radarr" class="open-collective"
+                     target="_blank">
+                     <button id="donate-stripe" class="btn btn-lg btn-block btn-success donate-option" type="button">
+                        <i class="fa fa-credit-card"></i> OpenCollective
                      </button>
-                     </a>
-                  </div>
-                  <div class="col-lg-8 offset-md-2 center">
-                     <p class="text-center">OR</p>
-                  </div>
-                  <div class="col-lg-8 offset-md-2"> <a href="https://github.com/sponsors/Radarr" class="open-collective" target="_blank">
-                     <button id="donate-stripe" class="btn btn-lg btn-block btn-dark" type="button">
-                     <i class="fa fa-github"></i>  Github Sponsors
+                  </a>
+               </div>
+               <div class="col-lg-8 offset-md-2 center">
+                  <p class="text-center">OR</p>
+               </div>
+               <div class="col-lg-8 offset-md-2"> <a href="https://github.com/sponsors/Radarr" class="open-collective"
+                     target="_blank">
+                     <button id="donate-stripe" class="btn btn-lg btn-block btn-dark donate-option" type="button">
+                        <i class="fa fa-github"></i> Github Sponsors
                      </button>
-                     </a>
-                  </div>
+                  </a>
                </div>
             </div>
          </div>
       </div>
-   </body>
+   </div>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script>
+   $(document).ready(function () {
+      new ClipboardJS('#copy-button');
+   });
+</script>
+
 </html>
