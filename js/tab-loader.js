@@ -1,6 +1,6 @@
 function scrollToHash(hash, speed) {
-    if (hash.startsWith("#downloads-v3-"))
-        hash = "#downloads-v3";
+    if (hash.startsWith("#downloads-"))
+        hash = "#downloads";
     var top = $(hash).offset().top - 70;
     $('html, body').animate({
         scrollTop: top
@@ -12,10 +12,10 @@ function isTab(hash) {
 }
 
 function openTab(hash) {
-    if (hash.startsWith('#downloads-v3-linux-'))
-        $('a.nav-link[href=#downloads-v3-linux]').tab('show');
-    if (hash.startsWith('#downloads-v3-nas-'))
-        $('a.nav-link[href=#downloads-v3-nas]').tab('show');
+    if (hash.startsWith('#downloads-linux-'))
+        $('a.nav-link[href=#downloads-linux]').tab('show');
+    if (hash.startsWith('#downloads-nas-'))
+        $('a.nav-link[href=#downloads-nas]').tab('show');
     $('a.nav-link[href=' + hash + ']').tab('show');
 }
 

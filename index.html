@@ -19,7 +19,7 @@
     <link rel=stylesheet type=text/css href=css/bootstrap-overrides.css?v=0032cb25c1f3202a92ff30daf9c072d5>
     <link rel=stylesheet type=text/css href=https://use.fontawesome.com/releases/v5.6.3/css/all.css integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ crossorigin=anonymous>
     <link rel=stylesheet type=text/css href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css>
-    <link rel=stylesheet type=text/css href=css/theme.css?v=12a462d8fdd8b5c2dbe41f04823e32f4>
+    <link rel=stylesheet type=text/css href=css/theme.css?v=7f9aeb6fe37531aa075c36e569515cd6>
     <link href=//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic,700italic,900italic rel=stylesheet type=text/css>
     <link rel=stylesheet type=text/css href=//cdn.jsdelivr.net/animatecss/3.2.0/animate.min.css media="screen, projection">
     <link rel=icon type=image/ico href=img/favicon.ico>
@@ -187,50 +187,50 @@
             <div class=row>
                 <ul class="nav nav-tabs nav-justified">
                     <li class="nav-item active">
-                        <a class="nav-link active" data-toggle=tab href=#downloads-v3-windows>
+                        <a class="nav-link active" data-toggle=tab href=#downloads-windows>
                             <i class="fab fa-windows"></i>
                             Windows
                         </a>
                     </li>
                     <li class=nav-item>
-                        <a class=nav-link data-toggle=tab href=#downloads-v3-linux>
+                        <a class=nav-link data-toggle=tab href=#downloads-linux>
                             <i class="fab fa-linux"></i>
                             Linux
                         </a>
                     </li>
                     <li class=nav-item>
-                        <a class=nav-link data-toggle=tab href=#downloads-v3-macos>
+                        <a class=nav-link data-toggle=tab href=#downloads-macos>
                             <i class="fab fa-apple"></i>
                             macOS
                         </a>
                     </li>
                     <li class=nav-item>
-                        <a class=nav-link data-toggle=tab href=#downloads-v3-nas>
+                        <a class=nav-link data-toggle=tab href=#downloads-nas>
                             <i class="fas fa-hdd"></i>
                             NAS
                         </a>
                     </li>
                     <li class=nav-item>
-                        <a class=nav-link data-toggle=tab href=#downloads-v3-docker>
+                        <a class=nav-link data-toggle=tab href=#downloads-docker>
                             <i class="fab fa-docker"></i>
                             Docker
                         </a>
                     </li>
                     <li class=nav-item>
-                        <a class=nav-link data-toggle=tab href=#downloads-v3-bsd>
+                        <a class=nav-link data-toggle=tab href=#downloads-bsd>
                             <i class="fab fa-freebsd"></i>
                             BSD
                         </a>
                     </li>
                     <li class=nav-item>
-                        <a class=nav-link data-toggle=tab href=#downloads-v3-other>
+                        <a class=nav-link data-toggle=tab href=#downloads-other>
                             <i class="fas fa-ellipsis-v"></i>
                             &nbsp;&nbsp;Others
                         </a>
                     </li>
                 </ul>
-                <div class=tab-content id=downloads-v3-tabcontent>
-                    <div class="tab-pane fade active in" id=downloads-v3-windows role=tabpanel>
+                <div class=tab-content id=downloads-tabcontent>
+                    <div class="tab-pane fade active in" id=downloads-windows role=tabpanel>
                         <dl class=install-steps>
                             <dt>
                                 Installation
@@ -244,14 +244,14 @@
                                 <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x64&installer=true>Download Windows x64 Installer</a>
                                 <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=windows&runtime=netcore&arch=x86&installer=true>Download Windows x86 Installer</a>
                                 <div class="alert alert-info">
-                                    <h4 class=alert-heading>Radarr v0.2 and v3 migration</h4>
-                                    Radarr v4 will convert any existing v0.2 or v3 directory automatically on startup.
+                                    <h4 class=alert-heading>Radarr migration</h4>
+                                    Radarr will convert any existing directory automatically on startup.
                                 </div>
                             </dd>
                         </dl>
                         <div class=install-alternatives>
-                            <div class=collapsed data-toggle=collapse data-target=#downloads-v3-windows-alternatives>Alternatives for advanced users</div>
-                            <div class=collapse id=downloads-v3-windows-alternatives>
+                            <div class=collapsed data-toggle=collapse data-target=#downloads-windows-alternatives>Alternatives for advanced users</div>
+                            <div class=collapse id=downloads-windows-alternatives>
                                 <h5>Manual Install</h5>
                                 <p>
                                     It is possible to install Radarr manually using the x64
@@ -260,30 +260,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id=downloads-v3-linux role=tabpanel>
+                    <div class="tab-pane fade" id=downloads-linux role=tabpanel>
                         <div>
                             <ul class="nav nav-pills">
                                 <li class="nav-item active">
-                                    <a class="nav-link active" data-toggle=pill href=#downloads-v3-linux-archlinux>
+                                    <a class="nav-link active" data-toggle=pill href=#downloads-linux-archlinux>
                                         <img src=logo/archlinux.svg class="icon svg">
                                         ArchLinux
                                     </a>
                                 </li>
                                 <li class=nav-item>
-                                    <a class=nav-link data-toggle=pill href=#downloads-v3-linux-debianubuntu>
+                                    <a class=nav-link data-toggle=pill href=#downloads-linux-debianubuntu>
                                         <i class="fab fa-ubuntu"></i>
                                         Debian or Ubuntu
                                     </a>
                                 </li>
                                 <li class=nav-item>
-                                    <a class=nav-link data-toggle=pill href=#downloads-v3-linux-other>
+                                    <a class=nav-link data-toggle=pill href=#downloads-linux-other>
                                         <i class="fas fa-ellipsis-v"></i>
                                         &nbsp;&nbsp;Others
                                     </a>
                                 </li>
                             </ul>
-                            <div class=tab-content id=download-v3-linux-tabcontent>
-                                <div class="tab-pane fade active in" id=downloads-v3-linux-archlinux role=tabpanel>
+                            <div class=tab-content id=download-linux-tabcontent>
+                                <div class="tab-pane fade active in" id=downloads-linux-archlinux role=tabpanel>
                                     <dl class=install-steps>
                                         <dt>
                                             Introduction
@@ -297,11 +297,11 @@
                                                 <a href=https://wiki.archlinux.org/index.php/AUR_helpers>AUR helper</a>.
                                             </p>
                                             <div class="alert alert-info">
-                                                <h4 class=alert-heading>Radarr v0.2 and v3 migration</h4>
+                                                <h4 class=alert-heading>Radarr migration</h4>
                                                 The existing radarr AUR packages already used
                                                 <code>/var/lib/radarr</code>
                                                 to store the Radarr database.
-                                                Radarr v4 will convert that directory automatically on startup.
+                                                Radarr will convert that directory automatically on startup.
                                             </div>
                                         </dd>
                                         <dt>
@@ -343,8 +343,8 @@ sudo systemctl enable --now radarr</code></pre>
                                         </dd>
                                     </dl>
                                     <div class=install-alternatives>
-                                        <div class=collapsed data-toggle=collapse data-target=#downloads-v3-linux-archlinux-alternatives>Alternatives for advanced users</div>
-                                        <div class=collapse id=downloads-v3-linux-archlinux-alternatives>
+                                        <div class=collapsed data-toggle=collapse data-target=#downloads-linux-archlinux-alternatives>Alternatives for advanced users</div>
+                                        <div class=collapse id=downloads-linux-archlinux-alternatives>
                                             <h5>Manual Install</h5>
                                             <p>
                                                 It is possible to install Radarr manually from upstream using the
@@ -353,13 +353,13 @@ sudo systemctl enable --now radarr</code></pre>
                                             <h5>Docker container</h5>
                                             <p>
                                                 You can follow the
-                                                <a href=#downloads-v3-docker>Docker guide</a>
+                                                <a href=#downloads-docker>Docker guide</a>
                                                 to install Radarr as a Docker container instead.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id=downloads-v3-linux-debianubuntu role=tabpanel>
+                                <div class="tab-pane fade" id=downloads-linux-debianubuntu role=tabpanel>
                                     <dl class=install-steps>
                                         <dt>
                                             Installation
@@ -370,17 +370,17 @@ sudo systemctl enable --now radarr</code></pre>
                                                 <a href=https://wiki.servarr.com/radarr/installation#linux>Link</a>
                                             </p>
                                             <div class="alert alert-info">
-                                                <h4 class=alert-heading>Radarr v0.2 and v3 migration</h4>
-                                                Radarr v4 will convert any existing v0.2 or v3 directory automatically on startup.
+                                                <h4 class=alert-heading>Radarr migration</h4>
+                                                Radarr will convert any existing directory automatically on startup.
                                             </div>
                                         </dd>
                                     </dl>
                                 </div>
-                                <div class="tab-pane fade" id=downloads-v3-linux-other role=tabpanel>
+                                <div class="tab-pane fade" id=downloads-linux-other role=tabpanel>
                                     <div class=install-description>
                                         <div class="alert alert-info">
-                                            Please contact us if you wish to port Radarr v4 for any other distribution that the ones already listed.<br>
-                                            Radarr v0.2 was supported by various third-parties on other platforms and we prefer to coordinate the port of v4.
+                                            Please contact us if you wish to port Radarr for any other distribution that the ones already listed.<br>
+                                            We prefer to coordinate any port.
                                         </div>
                                         <p>Generic .tar.gz downloads are available for linux, but dependencies, installation and permissions will need to be done manually.</p>
                                         <div>
@@ -400,7 +400,7 @@ sudo systemctl enable --now radarr</code></pre>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id=downloads-v3-macos role=tabpanel>
+                    <div class="tab-pane fade" id=downloads-macos role=tabpanel>
                         <dl class=install-steps>
                             <dt>
                                 Introduction
@@ -408,8 +408,8 @@ sudo systemctl enable --now radarr</code></pre>
                             <dd>
                                 <p>The easiest way to install Radarr on macOS is to use the App archive with the steps described below.</p>
                                 <div class="alert alert-info">
-                                    <h4 class=alert-heading>Radarr v0.2 and v3 migration</h4>
-                                    The Radarr v4 package will attempt to automatically migrate an existing Radarr v0.2 or v3 database.
+                                    <h4 class=alert-heading>Radarr migration</h4>
+                                    The Radarr package will attempt to automatically migrate an existing Radarr database.
                                     Radarr v0.2 used the user's home directory
                                     <code>~/.config/Radarr</code>
                                     to store the application data which v4 also uses.<br>
@@ -430,7 +430,7 @@ sudo systemctl enable --now radarr</code></pre>
                             <dd>
                                 <p>Open the archive and drag the Radarr icon to your Application folder.</p>
                                 <div class="alert alert-warning">
-                                    Radarr v4 is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities. </div>
+                                    Radarr v5 is not compatible with OSX versions < 10.15 (Catalina) due to .NET incompatibilities. </div>
                             </dd>
                             <dt>
                                 <span class=step>3</span>
@@ -459,8 +459,8 @@ sudo systemctl enable --now radarr</code></pre>
                             </dd>
                         </dl>
                         <div class=install-alternatives>
-                            <div class=collapsed data-toggle=collapse data-target=#downloads-v3-macos-alternatives>Alternatives for advanced users</div>
-                            <div class=collapse id=downloads-v3-macos-alternatives>
+                            <div class=collapsed data-toggle=collapse data-target=#downloads-macos-alternatives>Alternatives for advanced users</div>
+                            <div class=collapse id=downloads-macos-alternatives>
                                 <h5>Manual Install</h5>
                                 <p>
                                     It is possible to install Radarr manually using the
@@ -469,41 +469,41 @@ sudo systemctl enable --now radarr</code></pre>
                                 <h5>Docker container</h5>
                                 <p>
                                     You can follow the
-                                    <a href=#downloads-v3-docker>Docker guide</a>
+                                    <a href=#downloads-docker>Docker guide</a>
                                     to install Radarr as a Docker container instead.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id=downloads-v3-nas role=tabpanel>
+                    <div class="tab-pane fade" id=downloads-nas role=tabpanel>
                         <div>
                             <ul class="nav nav-pills">
                                 <li class="nav-item active">
-                                    <a class="nav-link active" data-toggle=pill href=#downloads-v3-nas-synology>
+                                    <a class="nav-link active" data-toggle=pill href=#downloads-nas-synology>
                                         Synology
                                     </a>
                                 </li>
                                 <li class=nav-item>
-                                    <a class=nav-link data-toggle=pill href=#downloads-v3-nas-qnap>
+                                    <a class=nav-link data-toggle=pill href=#downloads-nas-qnap>
                                         QNAP
                                     </a>
                                 </li>
                                 <li class=nav-item>
-                                    <a class=nav-link data-toggle=pill href=#downloads-v3-nas-other>
+                                    <a class=nav-link data-toggle=pill href=#downloads-nas-other>
                                         <i class="fas fa-ellipsis-v"></i>
                                         &nbsp;&nbsp;Others
                                     </a>
                                 </li>
                             </ul>
-                            <div class=tab-content id=download-v3-nas-tabcontent>
-                                <div class="tab-pane fade active in" id=downloads-v3-nas-synology role=tabpanel>
+                            <div class=tab-content id=download-nas-tabcontent>
+                                <div class="tab-pane fade active in" id=downloads-nas-synology role=tabpanel>
                                     <div class="alert alert-info">
                                         A NAS package and installation instructions are provided by SynoCommunity at:
                                         <a href=https://synocommunity.com/package/radarr>https://synocommunity.com/package/radarr</a>.
                                         Please note that the SynoCommunity typically has signifcant lag in providing updated packages, thus you may want to check out Docker.
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id=downloads-v3-nas-qnap role=tabpanel>
+                                <div class="tab-pane fade" id=downloads-nas-qnap role=tabpanel>
                                     <div class="alert alert-info">
                                         A NAS packages that requires a paid dependency is created by the QNAP community<br>
                                         <a href=https://www.qnapclub.eu/en/qpkg/1007>https://www.qnapclub.eu/en/qpkg/1007</a>.
@@ -511,11 +511,11 @@ sudo systemctl enable --now radarr</code></pre>
                                         Additionally, the QNAP Community requires a paid dependency which the Radarr Team does not condone.
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id=downloads-v3-nas-other role=tabpanel>
+                                <div class="tab-pane fade" id=downloads-nas-other role=tabpanel>
                                     <div class=install-description>
                                         <div class="alert alert-info">
-                                            Please contact us if you wish to port Radarr v3 for any other nas that the ones already listed.<br>
-                                            Radarr v0.2 was supported by various third-parties on other platforms and we prefer to coordinate the port of v3.
+                                            Please contact us if you wish to port Radarr for any other nas that the ones already listed.<br>
+                                            We prefer to coordinate any port.
                                         </div>
                                         <p>A generic download is available for linux, but dependencies, installation, and permissions will need to be done manually.</p>
                                         <a class="btn btn-radarr" href=https://radarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64>Download Linux .tar.gz</a>
@@ -524,7 +524,7 @@ sudo systemctl enable --now radarr</code></pre>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id=downloads-v3-docker role=tabpanel>
+                    <div class="tab-pane fade" id=downloads-docker role=tabpanel>
                         <dl class=install-steps>
                             <dt>
                                 Introduction
@@ -535,11 +535,11 @@ sudo systemctl enable --now radarr</code></pre>
                                     These instructions provide generic guidance that should apply to any Radarr Docker image.
                                 </p>
                                 <div class="alert alert-info">
-                                    <h4 class=alert-heading>Radarr v0.2 and v3 migration</h4>
+                                    <h4 class=alert-heading>Radarr migration</h4>
                                     Most docker containers use
                                     <code>/config</code>
                                     volume to mount the data directory and supply that path to Radarr as parameter.
-                                    Radarr v4 will convert the given directory on startup if a Radarr v0.2 or v3 database is found.
+                                    Radarr will convert the given directory on startup if a Radarr database is found.
                                 </div>
                             </dd>
                             <dt>
@@ -629,7 +629,7 @@ sudo systemctl enable --now radarr</code></pre>
                             </dd>
                         </dl>
                     </div>
-                    <div class="tab-pane fade" id=downloads-v3-bsd role=tabpanel>
+                    <div class="tab-pane fade" id=downloads-bsd role=tabpanel>
                         <dl class=install-steps>
                             <dt>
                                 Installation
@@ -642,16 +642,16 @@ sudo systemctl enable --now radarr</code></pre>
                                     <a href=https://wiki.servarr.com/radarr/installation#freebsd>Link</a>
                                 </p>
                                 <div class="alert alert-info">
-                                    <h4 class=alert-heading>Radarr v0.2 and v3 migration</h4>
-                                    Radarr v4 will convert any existing v0.2 or v3 directory automatically on startup.
+                                    <h4 class=alert-heading>Radarr migration</h4>
+                                    Radarr will convert any existing directory automatically on startup.
                                 </div>
                             </dd>
                         </dl>
                     </div>
-                    <div class="tab-pane fade" id=downloads-v3-other role=tabpanel>
+                    <div class="tab-pane fade" id=downloads-other role=tabpanel>
                         <div class="alert alert-info">
-                            Please contact us if you wish to port Radarr v3 for any other platform that the ones already listed.<br>
-                            Radarr v0.2 was supported by various third-parties on other platforms and we prefer to coordinate the port of v3.
+                            Please contact us if you wish to port Radarr for any other platform that the ones already listed.<br>
+                            We prefer to coordinate on any port.
                         </div>
                     </div>
                 </div>
@@ -705,7 +705,7 @@ sudo systemctl enable --now radarr</code></pre>
     </footer>
     <script src=//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js></script>
     <script src=//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js></script>
-    <script src=js/tab-loader.js?v=e07d03e0295b47c032ccdeed17bf4c1b></script>
+    <script src=js/tab-loader.js?v=8803c2c8ff026468efe3b93daf88ad65></script>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js></script>
     <script>
         hljs.initHighlightingOnLoad();

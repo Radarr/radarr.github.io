@@ -1,0 +1,25 @@
+<div class="row">
+  <ul class="nav nav-tabs nav-justified">
+    <tabview-item active href="#downloads-windows" icon="fab-windows">Windows</tabview-item>
+    <tabview-item href="#downloads-linux" icon="fab-linux">Linux</tabview-item>
+    <tabview-item href="#downloads-macos" icon="fab-apple">macOS</tabview-item>
+    <tabview-item href="#downloads-nas" icon="fas-hdd">NAS</tabview-item>
+    <tabview-item href="#downloads-docker" icon="fab-docker">Docker</tabview-item>
+    <tabview-item href="#downloads-bsd" icon="fab-freebsd">BSD</tabview-item>
+    <tabview-item href="#downloads-other" icon="fas-ellipsis-v">&nbsp;&nbsp;Others</tabview-item>
+  </ul>
+  <div class="tab-content" id="downloads-tabcontent">
+    <tabview-pane active id="downloads-windows" file="downloads/windows.marko"/>
+    <tabview-pane id="downloads-linux" file="downloads/linux.marko"/>
+    <tabview-pane id="downloads-macos" file="downloads/macos.marko"/>
+    <tabview-pane id="downloads-nas" file="downloads/nas.marko"/>
+    <tabview-pane id="downloads-docker" file="downloads/docker.marko"/>
+    <tabview-pane id="downloads-bsd" file="downloads/bsd.marko"/>
+    <tabview-pane id="downloads-other">
+      <alert level="info">
+        Please contact us if you wish to port Radarr for any other platform that the ones already listed.<br/>
+        We prefer to coordinate on any port.
+      </alert>
+    </tabview-pane>
+  </div>
+</div>

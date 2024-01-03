@@ -11,7 +11,7 @@
       The existing radarr AUR packages already used
       <code>/var/lib/radarr</code>
       to store the Radarr database.
-      Radarr v4 will convert that directory automatically on startup.
+      Radarr will convert that directory automatically on startup.
     </migration-alert>
   </install-step>
   <install-step num="1" title="Install Radarr">
@@ -40,7 +40,7 @@ sudo systemctl enable --now radarr</code></pre>
     <i>(Replace 'localhost' with your server IP if you're connecting remotely)</i>
   </install-step>
 </install-steps>
-<install-alternatives id="downloads-v3-linux-archlinux-alternatives">
+<install-alternatives id="downloads-linux-archlinux-alternatives">
   <h5>Manual Install</h5>
   <p>
     It is possible to install Radarr manually from upstream using the
@@ -49,7 +49,7 @@ sudo systemctl enable --now radarr</code></pre>
   <h5>Docker container</h5>
   <p>
     You can follow the
-    <a href="#downloads-v3-docker">Docker guide</a>
+    <a href="#downloads-docker">Docker guide</a>
     to install Radarr as a Docker container instead.
   </p>
 </install-alternatives>
